@@ -1,0 +1,27 @@
+The CREATE TABLE statement creates a table named "fruits"
+
+CREATE TABLE fruits (id integer primary key, name text, price integer, color text, origin text);
+
+insert into fruits (id, name, price, color, origin)
+
+values (1, 'Apple', 2, 'Red', 'USA');
+values (2, 'Grape', 1, 'Green', 'Chile');
+values (3, 'Mango', 4, 'Red', 'India');
+values (4, 'Banana', 1, 'Yellow', 'Panama');
+values (5, 'Watermelon', 6, 'Green', 'USA');
+values (6, 'Cantaloupe ', 5, 'Orange', 'India');
+values (7, 'Honeydew', 4, 'Beige', 'USA');
+values (8, 'Peach', 2, 'Red', 'USA');
+values (9, 'Pear', 2, 'Green', 'USA');
+values (10, 'Orange', 3, 'Orange', 'USA');
+values (11, 'Strawberry', 1, 'Red', 'USA');
+values (12, 'Blueberry', 1, 'Blue', 'USA');
+values (13, 'Raspberry', 1, 'Red', 'USA');
+values (14, 'Tomato', 2, 'Red', 'USA');
+values (15, 'Avacado', 4, 'Brown', 'Mexico');
+
+SELECT * FROM fruits;
+
+SELECT AVG (price) FROM fruits;
+SELECT * FROM fruits ORDER BY price DESC;
+SELECT AVG (price) FROM fruits
