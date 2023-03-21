@@ -1,0 +1,50 @@
+CREATE TABLE famous_people (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  occupation TEXT,
+  gender TEXT
+);
+
+INSERT INTO famous_people (id, name, occupation, gender) VALUES
+  (1, 'Kevin Hart', 'Comedian', 'Male'),
+  (2, 'Dwayne Johnson', 'Actor', 'Male'),
+  (3, 'Wentworth Miller', 'Actor', 'Male'),
+  (4, 'Michael Jordan', 'Basketball Player', 'Male'),
+  (5, 'Michael Phelps', 'Swimmer', 'Male'),
+  (6, 'Brad Pitt', 'Actor', 'Male'),
+  (7, 'Serena Williams', 'Tennis Player', 'Female'),
+  (8, 'Adam Sandler', 'Actor', 'Male'),
+  (9, 'Sandra Bullock', 'Actress', 'Female'),
+  (10, 'Tom Hanks', 'Actor', 'Male'),
+  (11, 'Robert Downey Jr.', 'Actor', 'Male'),
+  (12, 'Denzel Washington', 'Actor', 'Male'),
+  (13, 'Jimmy Fallon', 'Comedian', 'Male'),
+  (14, 'Jennifer Lawrence', 'Actress', 'Female'),
+  (15, 'Tiger Woods', 'Golfer', 'Male');
+
+CREATE TABLE famous_people_age (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  age TEXT
+);
+
+INSERT INTO famous_people_age (id, name, age) VALUES
+  (1, 'Kevin Hart', '42'),
+  (2, 'Dwayne Johnson', '49'),
+  (3, 'Wentworth Miller', '49'),
+  (4, 'Michael Jordan', '58'),
+  (5, 'Michael Phelps', '36'),
+  (6, 'Brad Pitt', '58'),
+  (7, 'Serena Williams', '40'),
+  (8, 'Adam Sandler', '55'),
+  (9, 'Sandra Bullock', '57'),
+  (10, 'Tom Hanks', '66'),
+  (11, 'Robert Downey Jr.', '56'),
+  (12, 'Denzel Washington', '67'),
+  (13, 'Jimmy Fallon', '47'),
+  (14, 'Jennifer Lawrence', '31'),
+  (15, 'Tiger Woods', '46');
+  
+SELECT famous_people.name, famous_people.occupation, famous_people_age.age
+FROM famous_people
+JOIN famous_people_age ON famous_people.id = famous_people_age.id
